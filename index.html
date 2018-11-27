@@ -92,7 +92,6 @@
             <div class="input-field">
               <input type="text" placeholder="Enter your mood" id="channel-input">
              </div>
-             <br>
              <div>
               <input type="submit" value="Get Moodlist" class="btn grey">
              </div>
@@ -100,18 +99,21 @@
           </form>
         </div>
         <section>
-          <div class="container">
-            <br>
-            <br>
-            <p>Log in with Google</p>
-            <button class="btn red" id="authorize-button">Log in</button>
-            <button class="btn red" id="signout-button">Log out</button>
-            <br>
-            <br>
+            <div class="col s6">
+                <div class="container">
+                <br>
+                <br>
+                <p>Log in with Google</p>
+                <button class="btn red" id="authorize-button">Log in</button>
+                <button class="btn red" id="signout-button">Log out</button>
+                <br>
+                <br>
+            </div>
             <div class="content">
               <div class="row">
+                <div id="channel-data" class="col s6">
 
-                <div id="channel-data" class="col s6"></div>
+                </div>
               </div>
               <div class="row" id="video-container">
 
@@ -165,12 +167,12 @@
 
 
 
-  
-  <script src="main.js"></script>
-
-<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+  <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
     onreadystatechange="if (this.readyState === 'complete') this.onload()">
   </script>
+
+  <script src="main.js"></script>
+
 
 
 
