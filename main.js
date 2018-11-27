@@ -40,8 +40,8 @@ channelForm.addEventListener("submit", e =>{
         gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
         //Handle Initial Sign in State
         updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-        authorizeButton.onclick = handleAuthClick;
-        signoutButton.onclick = handleSignoutClick;
+        authorizeButton.onclick = handleAuthClick();
+        signoutButton.onclick = handleSignoutClick();
      });
  }
 
