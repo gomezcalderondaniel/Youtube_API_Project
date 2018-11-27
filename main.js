@@ -1,3 +1,6 @@
+
+
+
 //Options
 const CLIENT_ID = "1037635597104-3onij1kaerr43diim6kfu579e5qtnod6.apps.googleusercontent.com";
  // Array of API discovery doc URLs for APIs used by the quickstart
@@ -21,7 +24,6 @@ channelForm.addEventListener("submit", e =>{
     e.preventDefault();
     const channel = channelInput.value;
     getChannel(channel);
-    console.log(channel);
 });
 
  //Load auth2 Library
@@ -40,22 +42,20 @@ channelForm.addEventListener("submit", e =>{
         gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
         //Handle Initial Sign in State
         updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-        authorizeButton.onclick = handleAuthClick();
-        signoutButton.onclick = handleSignoutClick();
+        authorizeButton.onclick = handleAuthClick;
+        signoutButton.onclick = handleSignoutClick;
      });
  }
 
  //Update UI Sign in State
  function updateSigninStatus(isSignedIn){
      if(isSignedIn){
-        console.log("you are signed in")
         authorizeButton.style.display = "none";
         signoutButton.style.display = "block";
         content.style.display = "block";
         videoContainer.style.display = "block";
         getChannel(defaultChannel);
      } else{
-         console.log("you are NOT signed in")
         authorizeButton.style.display = "block";
         signoutButton.style.display = "none";
         content.style.display = "none";
@@ -79,7 +79,6 @@ channelForm.addEventListener("submit", e =>{
 function showChannelData(data){
     const channelData = document.getElementById("channel-data");
     channelData.innerHTML = data;
-    console.log(data);
 }
 
 
@@ -95,7 +94,7 @@ function showChannelData(data){
          const channel = response.result.items[0];
          const output = `
          <ul class = "collection">
-            <li class="collection-item">Title: ${channel.snippet.title}</li>
+            <li class="collection-item">Tile: ${channel.snippet.tile}</li>
             <li class="collection-item">ID: ${channel.id}</li>
             <li class="collection-item">Subscribers: ${numWithCommas(channel.statistics.subscriberCount)}</li>
             <li class="collection-item">Views: ${numWithCommas(channel.statistics.viewCount)}</li>
