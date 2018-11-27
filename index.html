@@ -29,7 +29,7 @@
 
 
 
-  <title>Mood</title>
+  <title>MoodList</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -83,9 +83,18 @@
             <button class="dropdown-item" type="button">Grumpy</button>
             <input id="playlist-id" id="channel-input" type="text" class="form-control" aria-label="Text input with segmented button dropdown"
               placeholder="Enter your mood">
-            <input type="text" placeholder="Enter Channel Name" id="channel-input">
+            
           </div>
         </div> -->
+
+        <div class="col s6">
+          <form id="channel-form">
+            <div class="input-field">
+            <input type="text" placeholder="Enter Channel Name" id="channel-input">
+              <input type="submit" value="Get Channel Data" class="btn grey">
+            </div>
+          </form>
+        </div>
         <section>
           <div class="container">
             <p>Log in with Google</p>
@@ -95,14 +104,7 @@
             <br>
             <div class="content">
               <div class="row">
-                <div class="col s6">
-                  <form id="channel-form">
-                    <div class="input-field">
-                    <input type="text" placeholder="Enter Channel Name" id="channel-input">
-                      <input type="submit" value="Get Channel Data" class="btn grey">
-                    </div>
-                  </form>
-                </div>
+                
                 <div id="channel-data" class="col s6"></div>
               </div>
               <div class="row" id="video-container">
