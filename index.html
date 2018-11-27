@@ -50,10 +50,6 @@
    font-family: 'soundwaveregular'; 
   }
 
-  .btn {
-    margin-left: 10px;
-  }
-
   .content, #authorize-button, #signout-button{
         display: none;
     }
@@ -70,46 +66,54 @@
         <h2 class="text-white-50 mx-auto mt-2 mb-5">A playlist for your mood.</h2>
 
         <div class="btn-group">
-
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Select Mood
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <button class="dropdown-item" type="button">Happy</button>
+            <button class="dropdown-item" type="button">Sad</button>
+            <button class="dropdown-item" type="button">Anxious</button>
+            <button class="dropdown-item" type="button">Depressed</button>
+            <button class="dropdown-item" type="button">Relaxed</button>
+            <button class="dropdown-item" type="button">Pumped</button>
+            <button class="dropdown-item" type="button">Sleepy</button>
+            <button class="dropdown-item" type="button">Angry</button>
+            <button class="dropdown-item" type="button">Weird</button>
+            <button class="dropdown-item" type="button">Grumpy</button>
+            <input id="playlist-id" id="channel-input" type="text" class="form-control" aria-label="Text input with segmented button dropdown"
+              placeholder="Enter your mood">
+            <input type="text" placeholder="Enter Channel Name" id="channel-input">
+          </div>
+          <!-- <button type="button" id="playlist-button">Submit</button> -->
+        </div>
+        <section>
           <div class="container">
-            <div class="row">
-              <div class="col s6">
-                <form id="channel-form">
-                  <div class="input-field col s6">
-                    <input type="text" placeholder="Enter your mood" id="channel-input" class="form-control" aria-label="Text input with segmented button dropdown">
-                    <br>
-                    <input type="submit" value="Get Playlist" class="btn grey">
-                  </div>
-                </form>
+            <p>Log in with Google</p>
+            <button class="btn red" id="authorize-button">Log in</button>
+            <button class="btn red" id="signout-button">Log out</button>
+            <br>
+            <br>
+            <div class="content">
+              <div class="row">
+                <div class="col s6">
+                  <form id="channel-form">
+                    <div class="input-field">
+                    <input type="text" placeholder="Enter Channel Name" id="channel-input">
+                      <input type="submit" value="Get Channel Data" class="btn grey">
+                    </div>
+                  </form>
+                </div>
+                <div id="channel-data" class="col s6"></div>
               </div>
-            </div>
-
-            <section>
-              <div class="container">
-                <br>
-                <br>
-                <p>Log in with Google</p>
-                <button class="btn" id="authorize-button">Log in</button>
-                <button class="btn" id="signout-button">Log out</button>
-                <br>
-
+              <div class="row" id="video-container">
 
               </div>
-            </section>
-
-            <div class="row" id="video-container">
-
             </div>
           </div>
+        </section>
 
-          <!-- <input id="channel-input" type="text" class="form-control" aria-label="Text input with segmented button dropdown" placeholder="Enter your mood">
-            <input aria-label="Text input with segmented button dropdown" type="submit" placeholder="Enter your mood" id="channel-input"> -->
-        </div>
-        <!-- <button type="button" id="playlist-button">Submit</button> -->
       </div>
-
-
-    </div>
 
 
 
