@@ -1,3 +1,9 @@
+
+ 
+    $( document ).ready(function() {
+        console.log( "document loaded" );
+
+
 //Options
 const CLIENT_ID = "1037635597104-3onij1kaerr43diim6kfu579e5qtnod6.apps.googleusercontent.com";
  // Array of API discovery doc URLs for APIs used by the quickstart
@@ -154,3 +160,5 @@ function requestVideoPlaylist(playlistId){
         }
     });
 }
+
+});
