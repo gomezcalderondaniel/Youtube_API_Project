@@ -1,8 +1,6 @@
 
  
-    $( document ).ready(function() {
-        console.log( "document loaded" );
-
+  
 
 //Options
 const CLIENT_ID = "1037635597104-3onij1kaerr43diim6kfu579e5qtnod6.apps.googleusercontent.com";
@@ -22,7 +20,8 @@ const CLIENT_ID = "1037635597104-3onij1kaerr43diim6kfu579e5qtnod6.apps.googleuse
  const defaultChannel = "techguyweb";
 
 
-
+  
+  
 channelForm.addEventListener("submit", e =>{
     e.preventDefault();
     const channel = channelInput.value;
@@ -161,4 +160,4 @@ function requestVideoPlaylist(playlistId){
     });
 }
 
-});
+
